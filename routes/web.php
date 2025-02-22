@@ -26,7 +26,7 @@ Route::get('/search-user', function(){
 
 Route::get('/member/search/callback', [NominationController::class, 'paymentCallback2'])->name('member.payment.callback2');
 Route::post('/search-practice-id', [NominationController::class, 'searchPractice'])->name('search.practice');
-Route::post('/process-form', [NominationController::class, 'processSearch'])->name('process.form');
+Route::post('/process-form', [NominationController::class, 'processSearch'])->name('process.form.paystack');
 
 Route::get('/update-profile/{id}', [NominationController::class, 'showUploadForm'])->name('passport.upload');
 Route::post('/update-profile/{id}', [NominationController::class, 'upload'])->name('update.profile.data');
@@ -36,4 +36,6 @@ Route::get('/update/success', function () {
 
 Route::get('/member/success', [NominationController::class, 'success'])->name('payment.success');
 Route::get('/member/failure', [NominationController::class, 'failure'])->name('payment.failure');
+Route::get('/print-acknowlegment-slip', [NominationController::class, 'showEmailForm'])->name('show.form.print');
+Route::post('/process-acknowledge', [NominationController::class, 'processEmailForm'])->name('process.form');
 require __DIR__.'/auth.php';

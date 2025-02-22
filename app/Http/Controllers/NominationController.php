@@ -219,5 +219,25 @@ class NominationController extends Controller
     {
         return view('members.failure');
     }
+
+
+    public function showEmailForm()
+    {
+        return view('acknowledgement.form');
+    }
+
+    // Process the submitted email and show the event tag
+    public function processEmailForm(Request $request)
+    {
+        $request->validate([
+            'email' => 'required|email|exists:nominations,email', // Ensure the email exists in the users table
+        ]);
+
+        // Retrieve the user by email
+        $contestant = Nomination::where('email', $request->email)->first();
+        // Return the event tag view with the eventTag data
+        return view('acknowledgement.show', compact('contestant'));
+    }
+
     
 }

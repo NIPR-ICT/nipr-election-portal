@@ -12,7 +12,7 @@
     <h3 style="color: red; ">Please confirm your information, fill out the missing fields, and correct any null or incorrect entries.</h3>
     <br>
     <!-- Member Details Form -->
-    <form action="{{route('process.form')}}" method="POST">
+    <form action="{{route('process.form.paystack')}}" method="POST">
        @csrf
       <!-- {{--@method('PUT') --}} -->
       <div class="space-y-6">
@@ -52,7 +52,7 @@
     
     <div>
         <label for="dob" class="block text-gray-700">Date of Birth</label>
-        <input type="date" name="dob" id="dob" 
+        <input type="date" name="dob" 
                class="w-full border border-gray-300 p-2 rounded-md focus:ring-2 focus:ring-blue-500 focus:outline-none shadow-sm bg-white text-gray-700"
                value="{{ old('date_of_birth', $member->date_of_birth ?? '') }}">
     </div>

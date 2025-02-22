@@ -1,4 +1,5 @@
-<!-- Contact Section -->
+<div id="footer">
+  <!-- Contact Section -->
 <section id="contact" class="bg-gray-800 text-white py-20 sm:py-8 px-4 sm:px-6">
     <div class="container mx-auto text-center">
       <h2 class="text-4xl font-bold mb-8">Contact Us</h2>
@@ -26,6 +27,7 @@
     </div> -->
     <p class="text-lg">&copy; <?=date('Y')?> NIPR. All rights reserved.</p>
 </footer>
+</div>
 
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 </body>

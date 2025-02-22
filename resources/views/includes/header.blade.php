@@ -23,11 +23,11 @@
   <!-- Header / Navigation -->
   <header class="bg-gray-800 text-white">
     <div class="container mx-auto flex items-center justify-between py-8 px-6">
-      <a href="/"><img src="/images/logo_white.png" alt="logo" style="width:150px"></a>
+      <a href="/"><img src="/images/logo.png" alt="logo" style="width:100px"></a>
 
       <!-- Desktop Navigation Links -->
       <nav class="hidden md:flex space-x-6">
-        <a href="#" class="text-lg hover:text-red-500">About</a>
+        <a href="{{route('show.form.print')}}" class="text-lg hover:text-red-500">Print Acknowledgement</a>
         <a href="#" class="text-lg hover:text-red-500">Contact</a>
       </nav>
 
@@ -42,6 +42,6 @@
 
   <!-- Mobile Menu (hidden by default) -->
   <div id="mobile-menu" class="md:hidden hidden bg-gray-800 text-white px-6 py-4 space-y-6">
-    <a href="#" class="text-lg block hover:text-red-500">About</a>
+    <a href="{{route('show.form.print')}}" class="text-lg block hover:text-red-500">Print Acknowledgement</a>
     <a href="#" class="text-lg block hover:text-red-500">Contact</a>
   </div>
